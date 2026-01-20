@@ -1,0 +1,292 @@
+@charset "utf-8";
+
+/* 基本設定 */
+body {
+    font-family: "Hiragino Sans", "Noto Sans JP", sans-serif;
+    background: #f4e7d7;
+    font-size: 16px;
+    color: #333;
+    line-height: 1.7;
+    margin: 0;
+}
+
+img {
+    max-width: 100%;
+    display: block;
+}
+
+section {
+    padding: 6rem 5%;
+}
+
+a {
+    text-decoration: none;
+    color: #333;
+}
+
+a:hover {
+    color: #7c4e00;
+}
+
+
+/* 共通テキスト */
+.section-title {
+    font-size: clamp(1.8rem, 4vw, 2.6rem);
+    margin-bottom: 2rem;
+}
+
+p {
+    font-size: 1rem;
+    margin-bottom: 1.5rem;
+}
+
+
+/* HERO */
+#hero {
+    position: relative;
+    overflow: hidden;
+    color: #fff;
+}
+
+.hero-img {
+    display: block;
+}
+
+.hero-img-pc {
+    display: none;
+}
+
+.hero-logo {
+    position: absolute;
+    top: 1.5rem;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 120px;
+}
+
+.catchcopy {
+    position: absolute;
+    left: 20px;
+    bottom: 270px;
+    font-size: 1.8rem;
+    line-height: 1.4;
+    font-weight: bold;
+}
+
+.hero-lead {
+    position: absolute;
+    left: 20px;
+    bottom: 90px;
+    max-width: 90%;
+    font-size: clamp(0.95rem, 3vw, 1.1rem);
+}
+
+.hero-btn {
+    position: absolute;
+    right: 5%;
+    bottom: 5%;
+    background: #c9a568;
+    color: #fff;
+    padding: 0.8em 1.6em;
+    border-radius: 999px;
+    border: none;
+    font-size: 1rem;
+    cursor: pointer;
+}
+
+
+/* ABOUT/MENU */
+.section-img {
+    margin-top: 2rem;
+    border-radius: 1rem;
+}
+
+.menu-items {
+    margin-top: 1.5rem;
+}
+
+.menu-item {
+    margin-bottom: 1.2rem;
+}
+
+
+/* NEWS */
+.news-list {
+    list-style: none;
+    padding: 0;
+}
+
+.news-list li {
+    margin-bottom: 1rem;
+    font-size: 0.95rem;
+}
+
+
+/* GALLERY */
+.gallery-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+}
+
+.gallery-img {
+    border-radius: 1rem;
+}
+
+
+/* ACCESS */
+.map-container iframe {
+    width: 100%;
+    height: 300px;
+    border-radius: 1rem;
+}
+
+
+/* CONTACT */
+.contact-form {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.contact-form label {
+    font-size: 1rem;
+}
+
+label,
+.name-email {
+    width: 92%;
+}
+
+.name-text,
+.email,
+.contact-form textarea {
+    width: 100%;
+    padding: 0.8rem;
+    margin: 0 auto;
+    border-radius: 0.5rem;
+    border: 1px solid #bbb;
+}
+
+.form-buttons {
+    display: flex;
+    gap: 1rem;
+}
+
+.btn-submit,
+.btn-reset {
+    flex: 1;
+    padding: 0.8rem;
+    border-radius: 0.5rem;
+    border: none;
+    font-size: 1rem;
+}
+
+.btn-submit {
+    background: #c9a568;
+    color: #fff;
+}
+
+.btn-reset {
+    background: #999;
+    color: #fff;
+}
+
+.icon {
+    font-size: 2rem;
+    text-align: right;
+}
+
+
+/* FOOTER */
+#footer {
+    background: #eee;
+    text-align: center;
+    padding: 2rem 1rem;
+    font-size: 0.85rem;
+}
+
+
+
+
+
+
+/* PC版 */
+@media screen and (min-width: 768px) {
+    body {
+        font-size: 20px;
+    }
+
+    main {
+        width: 90%;
+        margin: 0 auto;
+    }
+
+    .hero-img {
+        display: none;
+    }
+
+    .hero-img-pc {
+        display: block;
+    }
+
+    .catchcopy {
+        font-size: 3.4rem;
+    }
+
+    .hero-logo {
+        width: 160px;
+    }
+
+    .hero-lead {
+        font-size: 1.5rem;
+    }
+
+    .about-content,
+    .menu-content,
+    .access-content {
+        display: flex;
+        gap: 4rem;
+        align-items: flex-start;
+        flex-direction: row-reverse;
+    }
+
+    .section-img {
+        width: 50%;
+        margin: 0;
+    }
+
+    .gallery-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    iframe {
+        width: 50%;
+    }
+
+    .news-list {
+        background: #7c4e00;
+        color: #fff;
+        padding: 3rem;
+        border-radius: 4rem;
+        max-width: 700px;
+        margin: 0 auto;
+    }
+
+    .contact-background {
+        background: #7c4e00;
+        color: #fff;
+        padding: 3rem;
+        border-radius: 4rem;
+    }
+
+    .contact-form {
+        width: 600px;
+        margin: 0 auto;
+    }
+
+    .fa-brands {
+        color: #fff;
+        font-size: 2.5rem;
+    }
+}
